@@ -40,6 +40,12 @@
 
 $route['default_controller'] = "frontpage";
 $route['404_override'] = '';
+$route['admin'] = "admin/index";
+$route['admin/(:any)'] = "admin/$1";
+// $route['knowlegdebase/(:any)'] = "frontpage/knowlegdebase_detail/$1";
+
+/* Menghilangkan frontpage di URL */
+$route['(:any)'] = "frontpage/$1";
 
 
 /* End of file routes.php */

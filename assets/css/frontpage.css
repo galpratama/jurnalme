@@ -1,0 +1,220 @@
+body {
+  font-family: 'Happy Monkey', cursive;
+}
+
+input{
+   text-align:center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Happy Monkey', cursive;
+}
+
+.login-front {
+  font-size: 100% !important;
+  margin-top: 5px;
+}
+
+footer {
+  margin-bottom: 30px;
+}
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 60px;
+
+  /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+  margin-top: -90px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  padding-bottom: 180px;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 768px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 150%;
+}
+
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.marketing {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 40px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* PARRALAX
+-------------------------------------------------- */
+
+    #intro { 
+      background: url('http://jurnalme:8888/assets/img/frontend/movingbg.jpg') fixed;
+      background-position: 0px 0px;
+      background-repeat: repeat-x;
+      margin: 0 auto; 
+      margin-bottom: 20px;
+      width: 100%; 
+      position: relative; 
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+      text-align: center;
+      color: #fff;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+
+      animation: animatedBackground 120s linear infinite;
+      -ms-animation: animatedBackground 120s linear infinite;
+      -moz-animation: animatedBackground 120s linear infinite;
+      -webkit-animation: animatedBackground 120s linear infinite;
+    }
+    /* 
+    #home { 
+      background: url(images/home.jpg) 50% 0 fixed; 
+      height: auto;  
+      margin: 0 auto; 
+        width: 100%; 
+        position: relative; 
+        box-shadow: 0 0 50px rgba(0,0,0,0.8);
+        padding: 200px 0;
+    }
+    #about { 
+      background: url(images/about.png) 50% 0 fixed; 
+      height: auto;
+      margin: 0 auto; 
+        width: 100%; 
+        position: relative; 
+        box-shadow: 0 0 50px rgba(0,0,0,0.8);
+        padding: 100px 0;
+        color: #fff;
+    }*/
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 320px) {
+
+  #intro { 
+    height: 500px;
+    padding: 100px 0;
+  }
+}
+
+
+@media (min-width: 768px) {
+
+  /* Remove the edge padding needed for mobile */
+  .marketing {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+
+  #intro { 
+    height: 620px;  
+    padding: 170px 0;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+
+  #intro { 
+    height: 677px;
+    padding: 200px 0;
+  }
+
+  #intro p {
+    font-size: 21px;
+  }
+}
+
+@keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+
+@-webkit-keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+@-moz-keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+@-o-keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+
+@-ms-keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
