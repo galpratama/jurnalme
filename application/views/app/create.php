@@ -12,7 +12,7 @@ tinymce.init({
 	
   plugins: [
     "advlist autolink lists link image charmap print preview anchor",
-    "searchreplace visualblocks code fullscreen",
+    "searchreplace visualblocks code fullscreen emoticons",
     "insertdatetime media table contextmenu paste jbimages"
   ],
 	
@@ -20,13 +20,15 @@ tinymce.init({
   // PUT PLUGIN'S BUTTON on the toolbar
   // ===========================================
 	
-  toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
+  toolbar: "jbimages | emoticons | insertfile undo redo | styleselect | bold italic underline strikethrough | hr | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
 	
   // ===========================================
   // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
   // ===========================================
 	
-  relative_urls: false
+  relative_urls: false,
+
+  height: 300
 	
 });
  
@@ -35,14 +37,14 @@ tinymce.init({
 
 <div class="container notebook-container">
 <h1>
-  <i class="fa fa-book"></i> <b>Jurnal</b> Personal
+  <i class="fa fa-book"></i> <input class="edit-header" type="text" placeholder="Judul Jurnal...">
 
   <span class="pull-right">
-    <a class="btn btn-warning btn-small">
-      <i class="fa fa-plus icon-white"></i> Buat Jurnal Baru
+    <a class="btn btn-primary btn-small">
+      <i class="fa fa-save icon-white"></i> Simpan
     </a>
   </span>
 </h1>
 <hr>
-    <textarea name="edit"></textarea>
+    <textarea name="edit" height="30"></textarea>
 </div>

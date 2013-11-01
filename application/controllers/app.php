@@ -38,10 +38,10 @@ class App extends Main_Controller {
       $this->load->view('app/template', $data);
    }
 
-   public function edit()
+   public function create()
    {
-      $data['title'] = 'Edit';
-      $data['view']  = 'edit';
+      $data['title'] = 'Buat Jurnal Baru';
+      $data['view']  = 'create';
       $this->load->view('app/template', $data);
    }
       

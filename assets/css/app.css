@@ -4,6 +4,12 @@ body, h1, h2, h3, h4, h5, h6{
     font-family: 'Raleway', sans-serif;
 }
 
+.edit-header {
+    background:transparent; 
+    border: 0; width: 75%; 
+    outline-width: 0;
+}
+
 .notebook-container {
     margin-top: 40px;
     padding: 20px 20px 20px 20px;

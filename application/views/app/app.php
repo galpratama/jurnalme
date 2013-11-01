@@ -3,7 +3,7 @@
   <i class="fa fa-book"></i> <b>Jurnal</b> Personal
 
   <span class="pull-right">
-    <a class="btn btn-warning btn-small">
+    <a class="btn btn-warning btn-small" href="create">
       <i class="fa fa-plus icon-white"></i> Buat Jurnal Baru
     </a>
   </span>
