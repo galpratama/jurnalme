@@ -44,6 +44,7 @@ $route['admin'] = "admin/index";
 $route['admin/(:any)'] = "admin/$1";
 $route['app'] = "app/index";
 $route['app/(:any)'] = "app/$1";
+$route['uploader/(:any)'] = "uploader/$1";
 // $route['knowlegdebase/(:any)'] = "frontpage/knowlegdebase_detail/$1";
 
 /* Menghilangkan frontpage di URL */

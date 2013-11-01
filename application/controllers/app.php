@@ -37,6 +37,13 @@ class App extends Main_Controller {
       $data['view']  = 'login';
       $this->load->view('app/template', $data);
    }
+
+   public function edit()
+   {
+      $data['title'] = 'Edit';
+      $data['view']  = 'edit';
+      $this->load->view('app/template', $data);
+   }
       
 }
 
