@@ -1,12 +1,9 @@
 $(document).ready(function() {
-	
       
   	$('input').keyup(function(){ // run anytime the value changes
   		var name = $('#front_name').val(); // get value of field
     	$('#register_name').val(name); // add them and output it
 	});
-
-	
 
 });
 
@@ -15,11 +12,16 @@ $('#search-catatan').focus(function()
     /*to make this flexible, I'm storing the current width in an attribute*/
     $(this).attr('data-default', $(this).width());
     $(this).animate({ width: 350 }, 'slow');
+    var input = document.getElementById ("search-catatan");
+    input.placeholder = "Cari Catatan menurut judul atau isi catatan";
+
 }).blur(function()
 {
     /* lookup the original width */
     var w = $(this).attr('data-default');
     $(this).animate({ width: 200 }, 'slow');
+    var input = document.getElementById ("search-catatan");
+    input.placeholder = "Cari Catatan ...";
 });
 
 //mutated from https://gist.github.com/justincarroll/5959773
