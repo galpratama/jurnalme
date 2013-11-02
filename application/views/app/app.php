@@ -4,7 +4,7 @@
 
   <span class="pull-right">
     <a class="btn btn-warning btn-small" href="create">
-      <i class="fa fa-plus icon-white"></i> Buat Jurnal Baru
+      <i class="fa fa-plus icon-white"></i> Buat Catatan Baru
     </a>
   </span>
 </h1>

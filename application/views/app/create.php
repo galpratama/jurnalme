@@ -37,7 +37,7 @@ tinymce.init({
 
 <div class="container notebook-container">
 <h1>
-  <i class="fa fa-book"></i> <input class="edit-header" type="text" placeholder="Judul Jurnal...">
+  <i class="fa fa-book"></i> <input class="edit-header" type="text" placeholder="Judul Catatan...">
 
   <span class="pull-right">
     <a class="btn btn-primary btn-small">

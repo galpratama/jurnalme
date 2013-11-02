@@ -24,6 +24,11 @@
 
 class App extends Main_Controller {
 
+   function __construct(){
+     parent::__construct();
+        $this->load->helper('gravatar');
+  }
+
    public function index()
    {
       $data['title'] = 'Beranda';
@@ -40,7 +45,7 @@ class App extends Main_Controller {
 
    public function create()
    {
-      $data['title'] = 'Buat Jurnal Baru';
+      $data['title'] = 'Buat Catatan Baru';
       $data['view']  = 'create';
       $this->load->view('app/template', $data);
    }

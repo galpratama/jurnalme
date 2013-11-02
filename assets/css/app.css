@@ -193,12 +193,14 @@ body, h1, h2, h3, h4, h5, h6{
 .pin p {
 
     margin: 0;
-    text-decoration: none;
 
+}
+
+.pin a {
+    font-weight: bold;
 }
 .pin:hover {
     opacity: 0.8;
-    text-decoration: none;
     }
 
 @media (max-width: 1201px){
