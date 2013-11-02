@@ -38,6 +38,17 @@ if ($this->uri->segment(2) != 'login') {
           </ul>
         </li>
       </ul>
+        <?php
+        if ($this->uri->segment(2) == '' || $this->uri->segment(2) == 'journal') { ?> 
+
+            <form class="navbar-form navbar-right">
+              <div class="form-group">
+                <input type="text" placeholder="Cari Catatan" id="search-catatan" style="width: 200px;" class="form-control pencarian">
+              </div>
+            </form>
+
+        <?php } ?>
+        
     </div><!--/.nav-collapse -->
 
   </div>
