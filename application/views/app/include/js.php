@@ -1,7 +1,7 @@
 <!-- Letakkan file JS yang akan di Include disini -->
 
 <script src="<?php echo base_url('assets/js/jquery.min.js') ?>"></script>
-<script src="http://training.comlabs.itb.ac.id/assets/js/jquery.fastLiveFilter.js"></script>
+<script src="<?php echo base_url('assets/js/jquery.fastLiveFilter.js') ?>"></script>
 <script>
     $(function() {
         $('#search-catatan').fastLiveFilter('#pin-outer');

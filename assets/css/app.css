@@ -1,4 +1,15 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(http://jurnalme:8888/assets/fonts/Raleway.woff) format('woff');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(http://jurnalme:8888/assets/fonts/Raleway-Bold.woff) format('woff');
+}
 
 body, h1, h2, h3, h4, h5, h6{
     font-family: 'Raleway', sans-serif;

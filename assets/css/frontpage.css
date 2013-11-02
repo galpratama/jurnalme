@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Happy Monkey';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Happy Monkey'), local('HappyMonkey-Regular'), url(http://jurnalme:8888/assets/fonts/HappyMonkey.woff) format('woff');
+}
+
 body {
   font-family: 'Happy Monkey', cursive;
 }
