@@ -11,7 +11,7 @@ if ($this->uri->segment(2) != 'login') {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo base_url();?>app/"><img src="<?php echo base_url(); ?>/assets/img/jurnalme-logo.png" style="height: 23px;" alt=""></a>
+      <a class="navbar-brand" href="<?php echo base_url();?>app/"><img src="<?php echo base_url(); ?>/assets/img/jurnalme-logo.png" style="height: 20px;" alt=""></a>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -22,7 +22,19 @@ if ($this->uri->segment(2) != 'login') {
             <li><a href="#"><i class="fa fa-book"></i> Work</a></li>
           </ul>
         </li>
-        <li><a href="#" data-toggle="modal" data-target="#buatjurnal"><i class="fa fa-plus-circle"></i> Tambah Jurnal</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-plus-circle"></i> Tambah Jurnal</a>
+          <div class="dropdown-menu dropdown-form" role="menu">
+            <form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
+              <div class="input-group">
+                <input type="text" class="form-control" style="width: 200px;">
+                <span class="input-group-btn">
+                  <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-plus"></i></button>
+                </span>
+              </div><!-- /input-group -->  
+            </form>
+          </div>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
