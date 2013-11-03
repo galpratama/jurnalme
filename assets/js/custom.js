@@ -7,6 +7,22 @@ $(document).ready(function() {
 
 });
 
+$(function() {
+    $('#search-catatan').fastLiveFilter('#pin-outer');
+    
+});
+
+$('#edit-judul-jurnal').hide();
+$('#hapus-judul-jurnal').hide();
+
+$("#judul-jurnal").hover(function(){
+    $('#edit-judul-jurnal').fadeIn();
+    $('#hapus-judul-jurnal').fadeIn();
+},function(){
+    $('#edit-judul-jurnal').fadeOut();
+    $('#hapus-judul-jurnal').fadeOut();
+});
+
 $('#search-catatan').focus(function()
 {
     /*to make this flexible, I'm storing the current width in an attribute*/
