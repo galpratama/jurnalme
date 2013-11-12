@@ -55,8 +55,18 @@ tinymce.init({
     <input type="text" class="bfh-selectbox-filter">
     <div role="listbox">
       <ul role="option">
-        <li><a tabindex="-1" href="#" data-option="1">&nbsp; <i class="fa fa-book"></i> Personal</a></li>
-        <li><a tabindex="-1" href="#" data-option="2">&nbsp; <i class="fa fa-book"></i> Work</a></li>
+        <?php
+          foreach ($notebooks->result() as $notebooks)
+          {
+            ?>
+              <li>
+                <a tabindex="-1" href="#" data-option="<?php echo $notebooks->notebooks_id;?>"> 
+                  &nbsp; <i class="fa fa-book"></i> <?php echo $notebooks->notebooks_name;?> 
+                </a>
+              </li>
+            <?php
+          }
+        ?>
       </ul>
     </div>
   </div>

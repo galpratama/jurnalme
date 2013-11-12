@@ -18,8 +18,18 @@ if ($this->uri->segment(2) != 'login') {
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-book"></i> Jurnal Saya</a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#"><i class="fa fa-book"></i> Personal</a></li>
-            <li><a href="#"><i class="fa fa-book"></i> Work</a></li>
+            <?php
+	          foreach ($notebooks->result() as $notebooks)
+	          {
+	            ?>
+	              <li>
+	                <a tabindex="-1" href="#"> 
+	                  <i class="fa fa-book"></i> <?php echo $notebooks->notebooks_name;?> 
+	                </a>
+	              </li>
+	            <?php
+	          }
+	        ?>
           </ul>
         </li>
         <li class="dropdown">
