@@ -45,6 +45,20 @@ class App extends Main_Controller {
 
       $this->load->view('app/template', $data);
    }
+   
+   public function notebooks()
+   {
+      if(!$this->session->userdata('is_logged_in')) redirect('app/login');
+
+      $data['notebooks'] = $this->app_model->notebooks_get($this->session->userdata('users_id'));
+      
+      $data['title'] = 'Beranda';
+      $data['view']  = 'app';
+
+      $data['notes'] = $this->app_model->notes_get($this->session->userdata('users_id'), $this->uri->segment(3));
+
+      $this->load->view('app/template', $data);
+   }
 
    public function create()
    {
