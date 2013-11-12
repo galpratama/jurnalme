@@ -27,24 +27,32 @@ class App extends Main_Controller {
    function __construct()
    {
      parent::__construct();
+      $this->load->model('app_model');
       $this->load->model('login_model');
       $this->load->helper('gravatar');
    }
 
    public function index()
    {
+      if(!$this->session->userdata('is_logged_in')) redirect('app/login');
+
+      $data['notebooks'] = $this->app_model->notebooks_get($this->session->userdata('users_id'));
+
       $data['title'] = 'Beranda';
       $data['view']  = 'app';
-
-      if(!$this->session->userdata('is_logged_in')) redirect('app/login');
 
       $this->load->view('app/template', $data);
    }
 
    public function create()
    {
+      if(!$this->session->userdata('is_logged_in')) redirect('app/login');
+
+      $data['notebooks'] = $this->app_model->notebooks_get($this->session->userdata('users_id'));
+
       $data['title'] = 'Buat Catatan Baru';
       $data['view']  = 'create';
+
       $this->load->view('app/template', $data);
    }
 
@@ -79,7 +87,13 @@ class App extends Main_Controller {
         // jika tidak inisialisasi data yg disubmit ke session
         if($cek != 0)
         {
+          
+          $users_id_get = $this->login_model->users_data($users_mail);
+
+          $users_id = $users_id_get->users_id;
+
           $this->session->set_userdata('is_logged_in', TRUE);
+          $this->session->set_userdata('users_id',$users_id);
           $this->session->set_userdata('users_mail',$users_mail);
           $this->session->set_userdata('users_role',$users_role);
          
@@ -97,8 +111,6 @@ class App extends Main_Controller {
           ";      
         }
       }
-
-      
       
    }
 
@@ -107,7 +119,7 @@ class App extends Main_Controller {
       // hapus session
       $this->session->sess_destroy();
       //redirect
-      redirect('app/login');
+      redirect('app');
    }
       
 }
