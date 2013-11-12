@@ -28,6 +28,9 @@ class Frontpage extends Main_Controller {
 	{
       $data['title'] = 'Beranda';
       $data['view']  = 'frontpage';
+
+      if($this->session->userdata('is_logged_in')) redirect('app');
+
       $this->load->view('frontpage/template', $data);
 	}
       
