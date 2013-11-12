@@ -44,7 +44,7 @@ if ($this->uri->segment(2) != 'login') {
             <li><a href="#" data-toggle="modal" data-target="#bantuan">Bantuan</a></li>
             <li><a href="#" data-toggle="modal" data-target="#akun">Pengaturan Akun</a></li>
             <li class="divider"></li>
-            <li><a href="#">Keluar</a></li>
+            <li><a href="<?php echo base_url();?>app/logout">Keluar</a></li>
           </ul>
         </li>
       </ul>
