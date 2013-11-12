@@ -22,11 +22,19 @@ if ($this->uri->segment(2) != 'login') {
 	          foreach ($notebooks->result() as $notebooks)
 	          {
 	            ?>
-	              <li>
+	              <li class="dropdown-submenu">
 	                <a tabindex="-1" href="<?php echo base_url();?>app/notebooks/<?php echo $notebooks->notebooks_id;?>"> 
 	                  <i class="fa fa-book"></i> <?php echo $notebooks->notebooks_name;?> 
 	                </a>
+	                <ul class="dropdown-menu">
+				      <li><a href="<?php echo base_url();?>app/notebooks/<?php echo $notebooks->notebooks_id;?>"><i class="fa fa-book"></i> Buka</a></li>
+				      <li><a href="#"><i class="fa fa-edit"></i> Ganti Nama</a></li>
+				      <li><a href="#"><i class="fa fa-trash-o"></i> Hapus</a></li>
+				    </ul>
 	              </li>
+	              <li>
+				    
+				  </li>
 	            <?php
 	          }
 	        ?>

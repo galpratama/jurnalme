@@ -56,6 +56,7 @@ class App extends Main_Controller {
       $data['view']  = 'app';
 
       $data['notes'] = $this->app_model->notes_get($this->session->userdata('users_id'), $this->uri->segment(3));
+      $data['notebooks_title'] = $this->app_model->notebooks_get_name($this->uri->segment(3));
 
       $this->load->view('app/template', $data);
    }

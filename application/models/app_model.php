@@ -17,6 +17,17 @@ class App_model extends CI_Model
    
    return $query;
   }
+  
+  public function notebooks_get_name($notebooks_id)
+  {
+   $this->db->select('notebooks_name');
+   $this->db->from('tbl_notebooks');
+   $this->db->where('notebooks_id', $notebooks_id);
+
+   $query = $this->db->get();
+   $row = $query->row();
+   return $row->notebooks_name;
+  }
 
   public function notes_get($users_id,$notebooks_id = null)
   {
