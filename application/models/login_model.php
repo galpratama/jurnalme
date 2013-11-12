@@ -25,6 +25,7 @@ class Login_model extends CI_Model
   {
    $this->db->select('users_mail');
    $this->db->select('users_name');
+   $this->db->select('users_id');
    $this->db->from('tbl_users');
    $this->db->where('users_mail', $users_mail);
    $query = $this->db->get();
