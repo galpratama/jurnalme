@@ -37,7 +37,7 @@ if ($this->uri->segment(2) != 'login') {
           <div class="dropdown-menu dropdown-form" role="menu">
             <form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
               <div class="input-group">
-                <input type="text" class="form-control" style="width: 200px;">
+                <input type="text" class="form-control" style="width: 200px;" placeholder="Nama Jurnal">
                 <span class="input-group-btn">
                   <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-plus"></i></button>
                 </span>
