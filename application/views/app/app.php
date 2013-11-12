@@ -6,8 +6,8 @@
           <b> Semua Catatan </b>
         <?php } else { ?>
           <b> Jurnal </b> <?php echo $notebooks_title;?>
-          <a href="" id="edit-judul-jurnal" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
-          <a href="" id="hapus-judul-jurnal" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i></a>
+          <a href="#" data-toggle="modal" data-target="#editnotebooks<?php echo $this->uri->segment(3);?>" id="edit-judul-jurnal" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
+          <a href="#" data-toggle="modal" data-target="#deletenotebooks<?php echo $this->uri->segment(3);?>" id="hapus-judul-jurnal" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i></a>
         <?php } ?>
 
       </span>
