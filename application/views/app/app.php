@@ -6,7 +6,7 @@
   <a href="" id="hapus-judul-jurnal" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i></a>
   </span>
   <span class="pull-right">
-    <a class="btn btn-warning btn-small" href="create">
+    <a class="btn btn-warning btn-small" href="<?php echo base_url();?>app/create">
       <i class="fa fa-plus icon-white"></i> Buat Catatan Baru
     </a>
   </span>
