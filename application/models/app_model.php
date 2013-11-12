@@ -9,13 +9,25 @@ class App_model extends CI_Model
   
   public function notebooks_get($users_id)
   {
-   $this->db->select('notebooks_id');
-   $this->db->select('notebooks_name');
-   $this->db->select('notebooks_user_id');
-
+   $this->db->select('*');
    $this->db->from('tbl_notebooks');
-
    $this->db->where('notebooks_user_id', $users_id);
+
+   $query = $this->db->get();
+   
+   return $query;
+  }
+
+  public function notes_get($users_id,$notebooks_id = null)
+  {
+   $this->db->select('*');
+   $this->db->from('tbl_notes');
+   $this->db->where('notes_users_id', $users_id);
+   $this->db->where('notes_status', TRUE);
+
+   if ($notebooks_id !== null) {
+     $this->db->where('notes_notebooks_id', $notebooks_id);
+   }
 
    $query = $this->db->get();
    
