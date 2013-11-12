@@ -123,6 +123,37 @@ class App extends Main_Controller {
       //redirect
       redirect('app');
    }
+   
+   public function notes_insert() {
+       
+       if ($this->input->post('notes_notebooks_id') == 0) 
+       {
+         echo 
+          "
+            <script>
+              alert('Simpan Gagal : Pilih Jurnal Terlebih Dahulu');
+              history.go(-1);
+            </script>
+          ";      
+       }
+       else 
+       {
+
+	       $data['notes_title'] = $this->input->post('notes_title');
+	       $data['notes_date'] = date( 'j F Y - G:i:s' );
+	       $data['notes_color'] = $this->input->post('notes_color');
+	       $data['notes_content'] = $this->input->post('notes_content');
+	       $data['notes_status'] = 1;
+	       $data['notes_fav'] = 0;
+	       $data['notes_notebooks_id'] = $this->input->post('notes_notebooks_id');
+	       $data['notes_users_id'] = $this->session->userdata('users_id');
+	       
+	       $this->app_model->notes_insert($data);
+	       
+	       redirect('app');
+	    }
+          
+   }
       
 }
 

@@ -36,19 +36,19 @@ tinymce.init({
 <!-- /TinyMCE -->
 
 <div class="container notebook-container">
+<form action="<?php echo base_url();?>app/notes_insert" method="post" accept-charset="utf-8">
+
 <div class="pull-right menu-button">
-  <a class="btn btn-primary btn-sm">
-    <i class="fa fa-save icon-white"></i> Simpan
-  </a>
+  <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save icon-white"></i> Simpan</button>
   <a class="btn btn-danger btn-sm" href="javascript:history.back()">
     <i class="fa fa-trash-o icon-white"></i>
   </a>
 </div>
 <div class="pull-right menu-button">
   <div class="bfh-selectbox">
-  <input type="hidden" name="selectbox3" value="12">
+  <input type="hidden" name="notes_notebooks_id" value="0" required>
   <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox" href="#">
-    <span class="bfh-selectbox-option bfh-selectbox-medium" data-option="12">&nbsp; <i class="fa fa-book"></i> Pilih Jurnal</span>
+    <span class="bfh-selectbox-option bfh-selectbox-medium">&nbsp; <i class="fa fa-book"></i> Pilih Jurnal</span>
     <b class="caret"></b>
   </a>
   <div class="bfh-selectbox-options">
@@ -74,7 +74,7 @@ tinymce.init({
 </div>
 <div class="pull-right menu-button">
   <div class="bfh-selectbox">
-  <input type="hidden" name="selectbox3" value="12">
+  <input type="hidden" name="notes_color" value="white">
   <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox" href="#">
     <span class="bfh-selectbox-option" data-option="white">&nbsp; <i class="fa fa-square-o"></i> Putih &nbsp; </span>
     <b class="caret"></b>
@@ -96,9 +96,9 @@ tinymce.init({
 </div>
 
 <h1>
-  <i class="fa fa-book"></i> <input class="edit-header" type="text" placeholder="Judul Catatan...">
+  <i class="fa fa-book"></i> <input class="edit-header" type="text" name="notes_title" placeholder="Judul Catatan...">
 </h1>
 
-<hr>
-    <textarea name="edit" height="30"></textarea>
+    <textarea name="notes_content" height="30"></textarea>
 </div>
+</form>
