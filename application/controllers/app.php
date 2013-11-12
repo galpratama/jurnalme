@@ -37,9 +37,11 @@ class App extends Main_Controller {
       if(!$this->session->userdata('is_logged_in')) redirect('app/login');
 
       $data['notebooks'] = $this->app_model->notebooks_get($this->session->userdata('users_id'));
-
+      
       $data['title'] = 'Beranda';
       $data['view']  = 'app';
+
+      $data['notes'] = $this->app_model->notes_get($this->session->userdata('users_id'));
 
       $this->load->view('app/template', $data);
    }
