@@ -1,9 +1,12 @@
 <div class="container notebook-container">
   <h1>	
     <i class="fa fa-book"></i> 
-      <span id="judul-jurnal"><b>Semua Catatan</b>
+      <span id="judul-jurnal">
+        <?php if ($this->uri->segment(2) !== "notebooks") { ?>
+        <b> Semua Catatan </b>
         <a href="" id="edit-judul-jurnal" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
         <a href="" id="hapus-judul-jurnal" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i></a>
+        <?php } ?>
       </span>
       <span class="pull-right">
         <a class="btn btn-warning btn-small" href="<?php echo base_url();?>app/create">
