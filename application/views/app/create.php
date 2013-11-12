@@ -76,18 +76,19 @@ tinymce.init({
   <div class="bfh-selectbox">
   <input type="hidden" name="selectbox3" value="12">
   <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox" href="#">
-    <span class="bfh-selectbox-option" data-option="12">&nbsp; <i class="fa fa-stop"></i> Hitam &nbsp; </span>
+    <span class="bfh-selectbox-option" data-option="white">&nbsp; <i class="fa fa-square-o"></i> Putih &nbsp; </span>
     <b class="caret"></b>
   </a>
   <div class="bfh-selectbox-options">
     <div role="listbox">
       <ul role="option">
-        <li><a tabindex="-1" href="#" data-option="1">&nbsp; <i class="fa fa-stop text-blue"></i> Biru &nbsp; </a></li>
-        <li><a tabindex="-1" href="#" data-option="2">&nbsp; <i class="fa fa-stop text-brown"></i> Coklat &nbsp; </a></li>
-        <li><a tabindex="-1" href="#" data-option="2">&nbsp; <i class="fa fa-stop text-red"></i> Merah &nbsp; </a></li>
-        <li><a tabindex="-1" href="#" data-option="2">&nbsp; <i class="fa fa-stop text-pink"></i> Pink &nbsp; </a></li>
-        <li><a tabindex="-1" href="#" data-option="2">&nbsp; <i class="fa fa-stop text-green"></i> Hijau &nbsp; </a></li>
-        <li><a tabindex="-1" href="#" data-option="2">&nbsp; <i class="fa fa-stop text-black"></i> Hitam &nbsp; </a></li>
+         <li><a tabindex="-1" href="#" data-option="white">&nbsp; <i class="fa fa-square-o text-white"></i> Putih &nbsp; </a></li>
+        <li><a tabindex="-1" href="#" data-option="blue">&nbsp; <i class="fa fa-square text-blue"></i> Biru &nbsp; </a></li>
+        <li><a tabindex="-1" href="#" data-option="brown">&nbsp; <i class="fa fa-square text-brown"></i> Coklat &nbsp; </a></li>
+        <li><a tabindex="-1" href="#" data-option="red">&nbsp; <i class="fa fa-square text-red"></i> Merah &nbsp; </a></li>
+        <li><a tabindex="-1" href="#" data-option="pink">&nbsp; <i class="fa fa-square text-pink"></i> Pink &nbsp; </a></li>
+        <li><a tabindex="-1" href="#" data-option="green">&nbsp; <i class="fa fa-square text-green"></i> Hijau &nbsp; </a></li>
+        <li><a tabindex="-1" href="#" data-option="black">&nbsp; <i class="fa fa-square text-black"></i> Hitam &nbsp; </a></li>
       </ul>
     </div>
   </div>
