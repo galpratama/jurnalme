@@ -13,7 +13,7 @@
                     <a class="btn btn-lg btn-primary" data-toggle="modal" href="#daftar" role="button">
                       <small><i class="fa fa-thumbs-o-up"></i></small> Aku Tertarik </a>
                   </form>
-                  <p class="login-front">Pengguna lama? <a data-toggle="modal" href="#login" >Masuk</a></p>
+                  <p class="login-front">Pengguna lama? <a href="<?php echo base_url();?>app/" >Masuk</a></p>
                 </div>
                 <div class="col-lg-3 col-md-3">
                 </div>
@@ -59,38 +59,6 @@
       &copy; 2013 <strong>Galih Pratama</strong> 
       </footer>
     </div><!-- /.container -->
-
-    <!-- Login -->
-  <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Masuk ke <strong>Jurnal.me</strong></h4>
-        </div>
-        <form role="form">
-          <div class="modal-body">
-              <div align="center">
-                <img src="<?php echo base_url(); ?>/assets/img/frontend/login-image.jpg" class="img-rounded" width="100%">
-              </div>
-              <br>
-              <div class="form-group">
-                <input type="email" class="form-control input-lg" id="login_email" name="login_email" placeholder="Alamat Email">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control input-lg" id="login_password" name="login_password" placeholder="Password">
-              </div>
-              <div class="form-group">
-                <button type="button" class="btn btn-primary btn-lg btn-block">Masuk</button>
-              </div>
-            </form>
-          <div class="modal-footer">
-            <a href="">Lupa Password </a> &middot; <a href="">Bantuan</a>
-          </div>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
 
   <!-- Registration -->
   <div class="modal fade" id="daftar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
