@@ -28,8 +28,8 @@ if ($this->uri->segment(2) != 'login') {
 	                </a>
 	                <ul class="dropdown-menu">
 				      <li><a href="<?php echo base_url();?>app/notebooks/<?php echo $notebooks->notebooks_id;?>"><i class="fa fa-book"></i> Buka</a></li>
-				      <li><a href="#"><i class="fa fa-edit"></i> Ganti Nama</a></li>
-				      <li><a href="#"><i class="fa fa-trash-o"></i> Hapus</a></li>
+				      <li><a href="#" ><i class="fa fa-edit"></i> Ganti Nama</a></li>
+				      <li><a href="#" href="#" data-toggle="modal" data-target="#deletenotebooks<?php echo $notebooks->notebooks_id;?>"><i class="fa fa-trash-o"></i> Hapus</a></li>
 				    </ul>
 	              </li>
 	              <li>
