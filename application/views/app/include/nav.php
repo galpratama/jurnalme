@@ -35,9 +35,10 @@ if ($this->uri->segment(2) != 'login') {
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-plus-circle"></i> Tambah Jurnal</a>
           <div class="dropdown-menu dropdown-form" role="menu">
-            <form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
+            <form action="<?php echo base_url();?>app/notebooks_insert" method="post" accept-charset="UTF-8">
               <div class="input-group">
-                <input type="text" class="form-control" style="width: 200px;" placeholder="Nama Jurnal">
+              	<input type="hidden" name="ref_url" value="<?php echo $_SERVER['REQUEST_URI'];?>">
+                <input type="text" name="notebooks_name" class="form-control" style="width: 200px;" placeholder="Nama Jurnal">
                 <span class="input-group-btn">
                   <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-plus"></i></button>
                 </span>

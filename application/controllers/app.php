@@ -168,6 +168,17 @@ class App extends Main_Controller {
 	    }
           
    }
+   
+   public function notebooks_insert() {
+       
+    $data['notebooks_name'] = $this->input->post('notebooks_name');
+    $data['notebooks_user_id'] = $this->session->userdata('users_id');
+
+    $this->app_model->notebooks_insert($data);
+
+    redirect($this->input->post('ref_url'));
+          
+   }
       
 }
 

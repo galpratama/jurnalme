@@ -40,6 +40,12 @@ class App_model extends CI_Model
    return;
   }
   
+  public function notebooks_insert($data)
+  {
+   $this->db->insert('tbl_notebooks', $data);
+   return;
+  }
+  
 }  
 
 ?>
