@@ -12,6 +12,10 @@ $(function() {
     
 });
 
+$('.dropdown-toggle').click(function() {
+		$(this).next('.dropdown-menu').slideToggle(250);
+		});
+
 $('#edit-judul-jurnal').hide();
 $('#hapus-judul-jurnal').hide();
 
