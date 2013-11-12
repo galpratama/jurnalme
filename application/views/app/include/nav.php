@@ -23,7 +23,7 @@ if ($this->uri->segment(2) != 'login') {
 	          {
 	            ?>
 	              <li>
-	                <a tabindex="-1" href="#"> 
+	                <a tabindex="-1" href="<?php echo base_url();?>app/notebooks/<?php echo $notebooks->notebooks_id;?>"> 
 	                  <i class="fa fa-book"></i> <?php echo $notebooks->notebooks_name;?> 
 	                </a>
 	              </li>
