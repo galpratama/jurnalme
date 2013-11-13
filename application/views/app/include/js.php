@@ -13,15 +13,15 @@
 <script type="text/javascript" src="<?php echo base_url('assets/js/hilitor.js') ?>"></script>
 <script type="text/javascript">
 
-  var myHilitor2;
+  var highlightsearch;
 
   document.addEventListener("DOMContentLoaded", function() {
-    myHilitor2 = new Hilitor("pin-outer");
-    myHilitor2.setMatchType("left");
+    highlightsearch = new Hilitor("pin-outer");
+    highlightsearch.setMatchType("left");
   }, false);
 
   document.getElementById("search-catatan").addEventListener("keyup", function() {
-    myHilitor2.apply(this.value);
+    highlightsearch.apply(this.value);
   }, false);
 
 </script>
