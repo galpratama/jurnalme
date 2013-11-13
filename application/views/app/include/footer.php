@@ -1,4 +1,6 @@
 <?php
+  if ($this->uri->segment(2) != "login") {
+  
   foreach ($notebooks->result() as $notebooks)
   {
     ?>
@@ -20,8 +22,27 @@
              
             </div>
           </div>
+
+          <div class="modal fade" id="editnotebooks<?php echo $notebooks->notebooks_id;?>" role="dialog" aria-labelledby="notebooks<?php echo $notebooks->notebooks_id;?>Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Sunting Jurnal <b><?php echo $notebooks->notebooks_name;?></b></h4>
+              </div>
+              <div class="modal-body">
+                <p>Apakah kamu yakin ingin menghapus <b><?php echo $notebooks->notebooks_name;?></b> beserta isinya? <strong class="text-danger">Aksi ini tidak bisa dibatalkan!</strong></p>
+              </div>
+              <div class="modal-footer">
+                <a href="<?php echo base_url();?>notebooks_delete/<?php echo $notebooks->notebooks_id;?>" class="btn btn-default" data-dismiss="modal">Hapus</a>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Batalkan</button>
+              </div>
+             </div>
+             
+            </div>
+          </div>
     <?php
-  }
+  } 
 ?>
 
 
@@ -151,6 +172,7 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<?php } ?>
 
 <!-- JS -->
 <?php $this->load->view('app/include/js'); ?>
