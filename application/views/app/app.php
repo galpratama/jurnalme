@@ -24,7 +24,7 @@
     {
       ?>
         <div class="col-lg-4 pin note-bungkus pin-inner">
-          <a href="/"><h2><?php echo $notes->notes_title;?></h2></a>
+          <a href="<?php echo base_url();?>app/notes/<?php echo $notes->notes_id;?>"><h2><?php echo $notes->notes_title;?></h2></a>
           <p class="post-snippet">
             <b><i class="fa fa-clock-o"></i> <?php echo $notes->notes_date;?></b> &middot; <i class="fa fa-book"></i> <b><?php echo $notes->notes_notebooks_id;?></b>
           </p>

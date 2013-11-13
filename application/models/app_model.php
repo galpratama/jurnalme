@@ -45,6 +45,19 @@ class App_model extends CI_Model
    return $query;
   }
   
+  public function notes_only_get($notes_id,$users_id)
+  {
+   $this->db->select('*');
+   $this->db->from('tbl_notes');
+   $this->db->where('notes_users_id', $users_id);
+   $this->db->where('notes_id', $notes_id);
+   $this->db->where('notes_status', TRUE);
+
+   $query = $this->db->get();
+   
+   return $query;
+  }
+  
   public function notes_insert($data)
   {
    $this->db->insert('tbl_notes', $data);
