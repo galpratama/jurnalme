@@ -10,3 +10,18 @@
 <script src="<?php echo base_url('assets/js/init.js') ?>"></script>
 <script src="<?php echo base_url('assets/js/custom.js') ?>"></script>
 <script src="<?php echo base_url('assets/js/holder.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/hilitor.js') ?>"></script>
+<script type="text/javascript">
+
+  var myHilitor2;
+
+  document.addEventListener("DOMContentLoaded", function() {
+    myHilitor2 = new Hilitor("pin-outer");
+    myHilitor2.setMatchType("left");
+  }, false);
+
+  document.getElementById("search-catatan").addEventListener("keyup", function() {
+    myHilitor2.apply(this.value);
+  }, false);
+
+</script>
