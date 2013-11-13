@@ -63,6 +63,8 @@ class App extends Main_Controller {
    public function notebooks()
    {
       if(!$this->session->userdata('is_logged_in')) redirect('app/login');
+      
+      if(!$this->uri->segment(3)) redirect('app');
 
       $data['notebooks'] = $this->app_model->notebooks_get($this->session->userdata('users_id'));
       
@@ -83,6 +85,22 @@ class App extends Main_Controller {
 
       $data['title'] = 'Buat Catatan Baru';
       $data['view']  = 'create';
+
+      $this->load->view('app/template', $data);
+   }
+   
+   public function edit()
+   {
+      if(!$this->session->userdata('is_logged_in')) redirect('app/login');
+      
+      if(!$this->uri->segment(3)) redirect('app');
+
+      $data['notebooks'] = $this->app_model->notebooks_get($this->session->userdata('users_id'));
+
+      $data['title'] = 'Edit Catatan';
+      $data['view']  = 'edit';
+      
+      $data['notes'] = $this->app_model->notes_only_get($this->uri->segment(3),$this->session->userdata('users_id'));
 
       $this->load->view('app/template', $data);
    }
