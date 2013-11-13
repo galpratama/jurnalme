@@ -1,3 +1,15 @@
+var highlightsearch;
+
+document.addEventListener("DOMContentLoaded", function() {
+highlightsearch = new Hilitor("pin-outer");
+highlightsearch.setMatchType("left");
+}, false);
+
+document.getElementById("search-catatan").addEventListener("keyup", function() {
+highlightsearch.apply(this.value);
+}, false);
+
+
 $(document).ready(function() {
       
   	$('input').keyup(function(){ // run anytime the value changes
