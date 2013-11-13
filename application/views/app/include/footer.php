@@ -7,16 +7,11 @@
         <div class="modal fade" id="deletenotebooks<?php echo $notebooks->notebooks_id;?>" role="dialog" aria-labelledby="notebooks<?php echo $notebooks->notebooks_id;?>Label" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Hapus Jurnal <b><?php echo $notebooks->notebooks_name;?></b></h4>
-              </div>
               <div class="modal-body">
-                <p>Apakah kamu yakin ingin menghapus <b><?php echo $notebooks->notebooks_name;?></b> beserta isinya? <strong class="text-danger">Aksi ini tidak bisa dibatalkan!</strong></p>
-              </div>
-              <div class="modal-footer">
-                <a href="<?php echo base_url();?>notebooks_delete/<?php echo $notebooks->notebooks_id;?>" class="btn btn-default" data-dismiss="modal">Hapus</a>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Batalkan</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title text-center" id="myModalLabel">Hapus Jurnal <b><?php echo $notebooks->notebooks_name;?> ?</b></h3>
+                <p class="text-center">Apakah kamu yakin ingin menghapus <b><?php echo $notebooks->notebooks_name;?></b> beserta isinya? <br><strong class="text-danger">Aksi ini tidak bisa dibatalkan!</strong></p>
+                <a href="<?php echo base_url();?>app/notebooks_delete/<?php echo $notebooks->notebooks_id;?>" class="btn btn-danger btn-block btn-lg" data-dismiss="modal">Hapus</a>
               </div>
              </div>
              
@@ -26,16 +21,15 @@
           <div class="modal fade" id="editnotebooks<?php echo $notebooks->notebooks_id;?>" role="dialog" aria-labelledby="notebooks<?php echo $notebooks->notebooks_id;?>Label" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Sunting Jurnal <b><?php echo $notebooks->notebooks_name;?></b></h4>
-              </div>
+
               <div class="modal-body">
-                <p>Apakah kamu yakin ingin menghapus <b><?php echo $notebooks->notebooks_name;?></b> beserta isinya? <strong class="text-danger">Aksi ini tidak bisa dibatalkan!</strong></p>
-              </div>
-              <div class="modal-footer">
-                <a href="<?php echo base_url();?>notebooks_delete/<?php echo $notebooks->notebooks_id;?>" class="btn btn-default" data-dismiss="modal">Hapus</a>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Batalkan</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title text-center" id="myModalLabel">Ganti Nama Jurnal</h3>
+                <br>
+                  <p>
+                    <input type="text" name="notebooks_name" id="inputNotebooks_name" class="form-control input-center input-lg" value="<?php echo $notebooks->notebooks_name;?>" required="required" pattern="" title="">
+                  </p>
+                  <a href="<?php echo base_url();?>notebooks_delete/<?php echo $notebooks->notebooks_id;?>" class="btn btn-block btn-primary" data-dismiss="modal">Ganti Nama</a>
               </div>
              </div>
              
