@@ -54,7 +54,6 @@ if ($this->uri->segment(2) != 'login') {
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img class="img-circle" src="<?php echo gravatar('hanamura.iost@gmail.com', 20 ); ?>" alt=""> Galih Pratama <b class="caret"></b></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="https://en.gravatar.com/" target="_blank">Ganti Foto</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#bantuan">Bantuan</a></li>
             <li><a href="#" data-toggle="modal" data-target="#akun">Pengaturan Akun</a></li>
             <li class="divider"></li>
             <li><a href="<?php echo base_url();?>app/logout">Keluar</a></li>
