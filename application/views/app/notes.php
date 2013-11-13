@@ -9,7 +9,7 @@
         <a class="btn btn-warning btn-small" href="javascript:history.back()">
           <i class="fa fa-chevron-left icon-white"></i> Kembali
         </a>
-        <a href="#" data-toggle="modal" data-target="#editnotebooks" class="btn btn-primary btn-small"><i class="fa fa-pencil"></i> Edit</a>
+        <a href="<?php echo base_url();?>app/edit/<?php echo $notes->notes_id;?>" class="btn btn-primary btn-small"><i class="fa fa-pencil"></i> Edit</a>
         <a href="#" data-toggle="modal" data-target="#deletenotebooks" class="btn btn-danger btn-small"><i class="fa fa-trash-o"></i> Hapus</a>
         
       </span>
