@@ -19,17 +19,19 @@ if ($this->uri->segment(2) != 'login') {
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-book"></i> Jurnal Saya</a>
           <ul class="dropdown-menu" role="menu">
             <?php
-	          foreach ($notebooks->result() as $notebooks)
-	          {
-	            ?>
-	              <li>
-	                <a tabindex="-1" href="<?php echo base_url();?>app/notebooks/<?php echo $notebooks->notebooks_id;?>"> 
-	                  <i class="fa fa-book"></i> <?php echo $notebooks->notebooks_name;?> 
-	                </a>
-	              </li>
-	            <?php
-	          }
-	        ?>
+  	          foreach ($notebooks->result() as $notebooks)
+  	          {
+  	            ?>
+  	              <li>
+  	                <a tabindex="-1" href="<?php echo base_url();?>app/notebooks/<?php echo $notebooks->notebooks_id;?>"> 
+  	                  <i class="fa fa-book"></i> <?php echo $notebooks->notebooks_name;?> 
+  	                </a>
+  	              </li>
+  	            <?php
+  	          }
+  	        ?>
+            <li class="divider"></li>
+            <li><a href="<?php echo base_url();?>app/trash/"><i class="fa fa-trash-o"></i> Dihapus</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -51,7 +53,11 @@ if ($this->uri->segment(2) != 'login') {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img class="img-circle" src="<?php echo gravatar('hanamura.iost@gmail.com', 20 ); ?>" alt=""> Galih Pratama <b class="caret"></b></a>
+        <?php 
+          $users_mail = $this->session->userdata('users_mail');
+          $users_name = $this->session->userdata('users_name');
+         ?>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img class="img-circle" src="<?php echo gravatar($users_mail, 20 ); ?>" alt=""> <?php echo $users_name; ?> <b class="caret"></b></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="https://en.gravatar.com/" target="_blank">Ganti Foto</a></li>
             <li><a href="#" data-toggle="modal" data-target="#akun">Pengaturan Akun</a></li>

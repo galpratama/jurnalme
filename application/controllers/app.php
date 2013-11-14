@@ -73,9 +73,26 @@ class App extends Main_Controller {
 
       $data['notes'] = $this->app_model->notes_get($this->session->userdata('users_id'), $this->uri->segment(3));
       $data['notebooks_title'] = $this->app_model->notebooks_get_name($this->uri->segment(3));
+      
+      $data['notebooks_notes_count'] = $this->app_model->notebooks_notes_count($this->uri->segment(3));
+      
+      $this->load->view('app/template', $data);
+   }
+   
+   public function trash()
+   {
+      if(!$this->session->userdata('is_logged_in')) redirect('app/login');
+
+      $data['notebooks'] = $this->app_model->notebooks_get($this->session->userdata('users_id'));
+      
+      $data['title'] = 'Dihapus';
+      $data['view']  = 'app';
+
+      $data['notes'] = $this->app_model->notes_trash_get($this->session->userdata('users_id'));
 
       $this->load->view('app/template', $data);
    }
+   
 
    public function create()
    {
@@ -140,9 +157,11 @@ class App extends Main_Controller {
           $users_id_get = $this->login_model->users_data($users_mail);
 
           $users_id = $users_id_get->users_id;
+          $users_name = $users_id_get->users_name;
 
           $this->session->set_userdata('is_logged_in', TRUE);
           $this->session->set_userdata('users_id',$users_id);
+          $this->session->set_userdata('users_name',$users_name);
           $this->session->set_userdata('users_mail',$users_mail);
           $this->session->set_userdata('users_role',$users_role);
          
@@ -202,10 +221,50 @@ class App extends Main_Controller {
           
    }
    
+    public function notes_update() {
+       
+       if ($this->input->post('notes_notebooks_id') == 0) 
+       {
+         echo 
+          "
+            <script>
+              alert('Simpan Gagal : Pilih Jurnal Terlebih Dahulu');
+              history.go(-1);
+            </script>
+          ";      
+       }
+       else 
+       {
+
+	       $data['notes_title'] = $this->input->post('notes_title');
+	       $data['notes_date'] = date( 'j F Y - G:i:s' );
+	       $data['notes_color'] = $this->input->post('notes_color');
+	       $data['notes_content'] = $this->input->post('notes_content');
+	       $data['notes_notebooks_id'] = $this->input->post('notes_notebooks_id');
+	       
+	       $this->app_model->notes_update($this->uri->segment(3),$data);
+	       
+	       redirect('app');
+	    }
+          
+   }
+   
    public function notes_delete() 
    {
        $this->app_model->notes_delete($this->uri->segment(3));
        redirect('app/notebooks/'.$this->uri->segment(4));
+   }
+   
+   public function notes_terminate() 
+   {
+       $this->app_model->notes_terminate($this->uri->segment(3));
+       redirect('app/trash/');
+   }
+   
+   public function notes_restore() 
+   {
+       $this->app_model->notes_restore($this->uri->segment(3));
+       redirect('app/notes/'.$this->uri->segment(3));
    }
    
    public function notebooks_insert() {
@@ -217,6 +276,18 @@ class App extends Main_Controller {
 
     redirect($this->input->post('ref_url'));
           
+   }
+   
+   public function notebooks_rename() 
+   {
+       $this->app_model->notebooks_rename($this->uri->segment(3),$this->input->post('notebooks_name'));
+       redirect('app/notebooks/'.$this->uri->segment(3));
+   }
+   
+   public function notebooks_delete() 
+   {
+       $this->app_model->notebooks_delete($this->uri->segment(3));
+       redirect('app');
    }
       
 }
