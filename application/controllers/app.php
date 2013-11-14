@@ -144,19 +144,19 @@ class App extends Main_Controller {
       {
         $users_mail = $this->input->post('users_mail');
         $users_pass = $this->input->post('users_pass');
-        $users_role = $this->input->post('users_role');
 
         // pengecekan data yg disubmit ke database
-        $cek = $this->login_model->users_get($users_mail, $users_pass, $users_role);
+        $cek = $this->login_model->users_get($users_mail, $users_pass);
 
         // jika tidak inisialisasi data yg disubmit ke session
         if($cek != 0)
         {
           
-          $users_id_get = $this->login_model->users_data($users_mail);
+          $users_data_get = $this->login_model->users_data($users_mail);
 
-          $users_id = $users_id_get->users_id;
-          $users_name = $users_id_get->users_name;
+          $users_id = $users_data_get->users_id;
+          $users_name = $users_data_get->users_name;
+          $users_role = $users_data_get->users_role;
 
           $this->session->set_userdata('is_logged_in', TRUE);
           $this->session->set_userdata('users_id',$users_id);
