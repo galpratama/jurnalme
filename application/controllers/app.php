@@ -202,6 +202,12 @@ class App extends Main_Controller {
           
    }
    
+   public function notes_delete() 
+   {
+       $this->app_model->notes_delete($this->uri->segment(3));
+       redirect('app/notebooks/'.$this->uri->segment(4));
+   }
+   
    public function notebooks_insert() {
        
     $data['notebooks_name'] = $this->input->post('notebooks_name');

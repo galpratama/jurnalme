@@ -64,6 +64,13 @@ class App_model extends CI_Model
    return;
   }
   
+  public function notes_delete($notes_id) {
+      $data['notes_status'] = FALSE;
+      
+      $this->db->where('notes_id',$notes_id);
+      $this->db->update('tbl_notes',$data);
+  }
+  
   public function notebooks_insert($data)
   {
    $this->db->insert('tbl_notebooks', $data);

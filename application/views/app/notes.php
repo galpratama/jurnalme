@@ -34,7 +34,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h3 class="modal-title text-center" id="myModalLabel"><b><?php echo $notes->notes_title;?></b></h3>
         <p class="text-center">Apakah kamu yakin ingin menghapus <b></b> catatan ini? <br><strong class="text-danger">Aksi ini tidak bisa dibatalkan!</strong></p>
-        <a href="<?php echo base_url();?>app/notes_delete/<?php echo $notes->notes_id;?>" class="btn btn-danger btn-block btn-lg" data-dismiss="modal">Hapus</a>
+        <a href="<?php echo base_url();?>app/notes_delete/<?php echo $notes->notes_id;?>/<?php echo $notes->notes_notebooks_id;?>" class="btn btn-danger btn-block btn-lg">Hapus</a>
       </div>
    </div>
   </div>
