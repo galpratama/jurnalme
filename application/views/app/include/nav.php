@@ -50,6 +50,14 @@ if ($this->uri->segment(2) != 'login') {
             </form>
           </div>
         </li>
+        <?php if ($this->session->userdata('users_role') == 'admin') { ?>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-dashboard"></i> Admin Area</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="<?php echo base_url();?>app/users/"><i class="fa fa-user"></i> Pengguna</a></li>
+            </ul>
+          </li>
+        <?php } ?>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
