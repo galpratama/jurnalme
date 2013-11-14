@@ -92,7 +92,6 @@ class App extends Main_Controller {
 
       $this->load->view('app/template', $data);
    }
-   
 
    public function create()
    {
@@ -267,7 +266,8 @@ class App extends Main_Controller {
        redirect('app/notes/'.$this->uri->segment(3));
    }
    
-   public function notebooks_insert() {
+   public function notebooks_insert() 
+   {
        
     $data['notebooks_name'] = $this->input->post('notebooks_name');
     $data['notebooks_user_id'] = $this->session->userdata('users_id');
