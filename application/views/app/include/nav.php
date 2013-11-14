@@ -72,8 +72,6 @@ if ($this->uri->segment(2) != 'login') {
               </div>
             </form>
     </div><!--/.nav-collapse -->
-
   </div>
 </div>
-
 <?php } ?>
