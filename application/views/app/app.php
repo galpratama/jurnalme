@@ -68,8 +68,15 @@
         <?php } else { ?>
           <a href="<?php echo base_url();?>app/notes/<?php echo $notes->notes_id;?>"><h2><?php echo $notes->notes_title;?></h2></a>
         <?php } ?>
+
+        <?php 
+          $this->db->where('notebooks_id', $notes->notes_notebooks_id);
+          $notebooks_query = $this->db->get('tbl_notebooks');
+          $notebooks_name = $notebooks_query->row();
+          $notebooks_name = $notebooks_name->notebooks_name;
+        ?>
           <p class="post-snippet">
-            <b><i class="fa fa-clock-o"></i> <?php echo $notes->notes_date;?></b> &middot; <i class="fa fa-book"></i> <b><?php echo $notes->notes_notebooks_id;?></b>
+            <b><i class="fa fa-clock-o"></i> <?php echo $notes->notes_date;?></b> &middot; <i class="fa fa-book"></i> <b><?php echo $notebooks_name;?></b>
           </p>
           <br>
           <div class="note-bungkus notes notes-<?php echo $notes->notes_color;?>">
