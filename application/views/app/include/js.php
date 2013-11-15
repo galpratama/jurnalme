@@ -9,5 +9,7 @@
 <script src="<?php echo base_url('assets/js/masonry.pkgd.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/js/init.js') ?>"></script>
 <script src="<?php echo base_url('assets/js/hilitor.js') ?>"></script>
-<script src="<?php echo base_url('assets/js/custom.js') ?>"></script>
 <script src="<?php echo base_url('assets/js/holder.js') ?>"></script>
+<script src="<?php echo base_url('assets/js/jquery.dataTables.js') ?>"></script>
+<script src="<?php echo base_url('assets/js/datatables.js') ?>"></script>
+<script src="<?php echo base_url('assets/js/custom.js') ?>"></script>

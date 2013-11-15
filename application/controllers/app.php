@@ -46,6 +46,21 @@ class App extends Main_Controller {
       $this->load->view('app/template', $data);
    }
    
+   public function users()
+   {
+      if(!$this->session->userdata('is_logged_in')) redirect('app/login');
+      if($this->session->userdata('users_role') == 'user') redirect('app');
+
+      $data['notebooks'] = $this->app_model->notebooks_get($this->session->userdata('users_id'));
+      
+      $data['title'] = 'Manajemen Pengguna';
+      $data['view']  = 'users';
+      
+      $data['users'] = $this->app_model->users_get(); 
+
+      $this->load->view('app/template', $data);
+   }
+   
    public function notes()
    {
       if(!$this->session->userdata('is_logged_in')) redirect('app/login');

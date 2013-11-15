@@ -135,6 +135,16 @@ class App_model extends CI_Model
    return;
   }
   
+  public function users_get()
+  {
+   $this->db->select('*');
+   $this->db->from('tbl_users');
+
+   $query = $this->db->get();
+   
+   return $query;
+  }
+  
 }  
 
 ?>
