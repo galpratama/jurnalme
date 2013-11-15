@@ -145,6 +145,18 @@ class App_model extends CI_Model
    return $query;
   }
   
+  public function users_delete($users_id) 
+  {
+      $this->db->where('users_id',$users_id);
+      $this->db->delete('tbl_users');
+  }
+  
+  public function users_update($users_id,$data) 
+  {
+      $this->db->where('users_id',$users_id);
+      $this->db->update('tbl_users',$data);
+  }
+  
 }  
 
 ?>

@@ -61,6 +61,24 @@ class App extends Main_Controller {
       $this->load->view('app/template', $data);
    }
    
+   public function users_update() 
+   {    
+        $data['users_name'] = $this->input->post('users_name');
+        $data['users_pass'] = $this->input->post('users_pass');
+        $data['users_mail'] = $this->input->post('users_mail');
+        $data['users_role'] = $this->input->post('users_role');
+
+        $this->app_model->users_update($this->uri->segment(3),$data);
+
+        redirect('app/users');
+   }
+   
+   public function users_delete() 
+   {
+       $this->app_model->users_delete($this->uri->segment(3));
+       redirect('app/users');
+   }
+   
    public function notes()
    {
       if(!$this->session->userdata('is_logged_in')) redirect('app/login');
