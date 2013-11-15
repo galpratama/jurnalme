@@ -27,16 +27,6 @@ document.getElementById("search-catatan").addEventListener("keyup", function() {
 highlightsearch.apply(this.value);
 }, false);
 
-
-$(document).ready(function() {
-      
-  	$('input').keyup(function(){ // run anytime the value changes
-  		var name = $('#front_name').val(); // get value of field
-    	$('#register_name').val(name); // add them and output it
-	});
-
-});
-
 $(function() {
     $('#search-catatan').fastLiveFilter('#pin-outer');
     

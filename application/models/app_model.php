@@ -157,6 +157,12 @@ class App_model extends CI_Model
       $this->db->update('tbl_users',$data);
   }
   
+  public function users_insert($data)
+  {
+   $this->db->insert('tbl_users', $data);
+   return;
+  }
+  
 }  
 
 ?>

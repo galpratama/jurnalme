@@ -73,6 +73,33 @@ class App extends Main_Controller {
         redirect('app/users');
    }
    
+   public function users_manage() 
+   {    
+        $data['users_name'] = $this->input->post('users_name');
+        $data['users_pass'] = $this->input->post('users_pass');
+        $data['users_mail'] = $this->input->post('users_mail');
+
+        $this->app_model->users_update($this->session->userdata('users_id'),$data);
+        
+        $this->session->set_userdata('users_name',$data['users_name']);
+        $this->session->set_userdata('users_mail',$data['users_mail']);
+        $this->session->set_userdata('users_pass',$data['users_pass']);
+
+        redirect($this->input->post('ref_url'));
+   }
+   
+   public function users_insert() 
+   {    
+        $data['users_name'] = $this->input->post('users_name');
+        $data['users_pass'] = $this->input->post('users_pass');
+        $data['users_mail'] = $this->input->post('users_mail');
+        $data['users_role'] = $this->input->post('users_role');
+
+        $this->app_model->users_insert($data);
+
+        redirect('app/users');
+   }
+   
    public function users_delete() 
    {
        $this->app_model->users_delete($this->uri->segment(3));
@@ -194,6 +221,7 @@ class App extends Main_Controller {
           $this->session->set_userdata('is_logged_in', TRUE);
           $this->session->set_userdata('users_id',$users_id);
           $this->session->set_userdata('users_name',$users_name);
+          $this->session->set_userdata('users_pass',$users_pass);
           $this->session->set_userdata('users_mail',$users_mail);
           $this->session->set_userdata('users_role',$users_role);
          

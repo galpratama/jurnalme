@@ -16,12 +16,8 @@
                     
                     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                     
-                    <label class="checkbox pull-left">
-                        <input type="checkbox" value="ingat-saya">
-                        Ingat Saya
-                    </label>
                     
-                    <a href="#" class="pull-right need-help">Lupa Password? </a><span class="clearfix"></span>
+                    <a href="<?php echo base_url();?>" class="pull-right need-help">Kembali ke Beranda </a><span class="clearfix"></span>
                 </form>
             </div>
         </div>

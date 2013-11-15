@@ -2,22 +2,22 @@
   <section id="intro" data-speed="6" data-type="background">
     <div class="container">
       <h1>Permudah Kehidupanmu.</h1>
-              <p><strong>Jurnal.me</strong> adalah catatan online untuk menulis cerita, kegiatan, dan mimpi-mu.</p>
-              <div>
-                <div class="col-lg-3 col-md-3">
-                </div>
-                <div class="col-lg-6 col-md-6">
-                  <form action="#">
-                    <input type="text" class="form-control input-lg cta" id="front_name" placeholder="Siapa Namamu?" autocomplete="off" required>
-                    <br>
-                    <a class="btn btn-lg btn-primary" data-toggle="modal" href="#daftar" role="button">
-                      <small><i class="fa fa-thumbs-o-up"></i></small> Aku Tertarik </a>
-                  </form>
-                  <p class="login-front">Pengguna lama? <a href="<?php echo base_url();?>app/" >Masuk</a></p>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                </div>
-              </div>
+        <p><strong>Jurnal.me</strong> adalah catatan online untuk menulis cerita, kegiatan, dan mimpi-mu.</p>
+        <div>
+          <div class="col-lg-3 col-md-3">
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <form action="#">
+              <input type="text" class="form-control input-lg cta" id="front_name" placeholder="Siapa Namamu?" autocomplete="off" required>
+              <br>
+              <a class="btn btn-lg btn-primary" data-toggle="modal" href="#daftar" role="button">
+                <small><i class="fa fa-thumbs-o-up"></i></small> Aku Tertarik </a>
+            </form>
+            <p class="login-front">Pengguna lama? <a href="<?php echo base_url();?>app/" >Masuk</a></p>
+          </div>
+          <div class="col-lg-3 col-md-3">
+          </div>
+        </div>
       </div>
   </section>
     <!-- Marketing messaging and featurettes
@@ -53,7 +53,7 @@
       <!-- FOOTER -->
       <footer class="hidden-xs">
       <p class="pull-right"><a href="#"><i class="icon-chevron-up"></i> Kembali ke atas</a></p>
-      <p>&copy; 2013 <strong>Galih Pratama</strong> &middot; Powered by <strong>RAG Creative Development</strong> &middot; <a href="#">Tentang</a> &middot; <a href="#">FAQ</a></p>
+      <p>&copy; 2013 <strong>Galih Pratama</strong></p>
       </footer>
       <footer class="hidden-lg hidden-md hidden-sm">
       &copy; 2013 <strong>Galih Pratama</strong> 
@@ -68,23 +68,20 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4 class="modal-title">Daftar Akun <strong>Jurnal.me</strong></h4>
         </div>
-        <form role="form">
+        <form role="form" action="<?php echo base_url();?>register" method="post" accept-charset="UTF-8">
           <div class="modal-body">
               <div align="center">
                 <img src="<?php echo base_url(); ?>/assets/img/frontend/login-image.jpg" class="img-rounded" width="100%">
               </div>
               <br>
               <div class="form-group">
-                <input type="text" class="form-control input-lg" id="register_name" name="register_name" placeholder="Nama Lengkap">
+                <input type="text" class="form-control input-lg" id="modal_name" name="users_name" placeholder="Nama Lengkap">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control input-lg" id="register_email" name="register_email" placeholder="Email">
+                <input type="text" class="form-control input-lg" id="users_mail" name="users_mail" placeholder="Email">
               </div>
               <div class="form-group">
-                <input type="password" class="form-control input-lg" id="register_password" name="register_password" placeholder="Password">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control input-lg" id="register_repeat_password" name="register_repeat_password" placeholder="Ulangi Password">
+                <input type="password" class="form-control input-lg" id="users_pass" name="users_pass" placeholder="Password">
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-lg btn-block">Daftar</button>

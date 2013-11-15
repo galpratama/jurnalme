@@ -24,6 +24,12 @@
 
 class Frontpage extends Main_Controller {
 
+   function __construct()
+   {
+     parent::__construct();
+      $this->load->model('app_model');
+   }
+
    public function index()
 	{
       $data['title'] = 'Beranda';
@@ -33,6 +39,18 @@ class Frontpage extends Main_Controller {
 
       $this->load->view('frontpage/template', $data);
 	}
+
+   public function register() 
+   {    
+        $data['users_name'] = $this->input->post('users_name');
+        $data['users_pass'] = $this->input->post('users_pass');
+        $data['users_mail'] = $this->input->post('users_mail');
+        $data['users_role'] = 'user';
+
+        $this->app_model->users_insert($data);
+
+        redirect('app');
+   }
       
 }
 

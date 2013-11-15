@@ -117,24 +117,24 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title">Tambah Pengguna</h4>
       </div>
-      <form class="form-horizontal" role="form">
+      <form class="form-horizontal" role="form" method="post" action="<?php echo base_url(); ?>app/users_insert/">
 	      <div class="modal-body">
 			  <div class="form-group">
 			    <label for="input_name" class="col-sm-2 control-label">Nama</label>
 			    <div class="col-sm-10">
-			      <input required type="text" class="form-control" id="input_name" placeholder="Nama">
+			      <input required name="users_name" type="text" class="form-control" id="input_name" placeholder="Nama">
 			    </div>
 			  </div>
 			  <div class="form-group">
 			    <label for="input_email" class="col-sm-2 control-label">Email</label>
 			    <div class="col-sm-10">
-			      <input required type="email" class="form-control" id="input_email" placeholder="Email">
+			      <input required name="users_mail" type="email" class="form-control" id="input_email" placeholder="Email">
 			    </div>
 			  </div>
 			  <div class="form-group">
 			    <label for="input_password" class="col-sm-2 control-label">Password</label>
 			    <div class="col-sm-10">
-			      <input required type="password" class="form-control" id="input_password" placeholder="Password">
+			      <input required name="users_pass" type="password" class="form-control" id="input_password" placeholder="Password">
 			    </div>
 			  </div>
 			  <div class="form-group pull-right">
@@ -142,13 +142,12 @@
 			      <select required name="users_role">
 			      	<option value="user">User</option>
 			      	<option value="admin">Administrator</option>
-			      	option
 			      </select>
 			    </div>
 			  </div>
 	     </div>
 	     <div class="modal-footer">
-			<button type="button" class="btn btn-primary"><i class="fa fa-save"></i> Simpan</button>
+			<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Simpan</button>
 	     </div>
      </form>
      </div>
