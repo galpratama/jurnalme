@@ -42,7 +42,7 @@ if ($this->uri->segment(2) != 'login') {
           	 <br>	
               <div class="input-group">
               	<input type="hidden" name="ref_url" value="<?php echo $_SERVER['REQUEST_URI'];?>">
-                <input type="text" name="notebooks_name" class="form-control" style="width: 200px;" placeholder="Nama Jurnal">
+                <input required type="text" name="notebooks_name" class="form-control" style="width: 200px;" placeholder="Nama Jurnal">
                 <span class="input-group-btn">
                   <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-plus"></i></button>
                 </span>

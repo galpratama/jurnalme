@@ -75,13 +75,13 @@
               </div>
               <br>
               <div class="form-group">
-                <input type="text" class="form-control input-lg" id="modal_name" name="users_name" placeholder="Nama Lengkap">
+                <input required readonly type="text" class="form-control input-lg" id="modal_name" name="users_name" placeholder="Nama Lengkap">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control input-lg" id="users_mail" name="users_mail" placeholder="Email">
+                <input required type="text" class="form-control input-lg" id="users_mail" name="users_mail" placeholder="Email">
               </div>
               <div class="form-group">
-                <input type="password" class="form-control input-lg" id="users_pass" name="users_pass" placeholder="Password">
+                <input required type="password" class="form-control input-lg" id="users_pass" name="users_pass" placeholder="Password">
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-lg btn-block">Daftar</button>

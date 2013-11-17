@@ -96,7 +96,7 @@ tinymce.init({
 </div>
 
 <h1>
-  <i class="fa fa-book"></i> <input class="edit-header" type="text" name="notes_title" placeholder="Judul Catatan...">
+  <i class="fa fa-book"></i> <input required class="edit-header" type="text" name="notes_title" placeholder="Judul Catatan...">
 </h1>
 
     <textarea name="notes_content" height="30"></textarea>
