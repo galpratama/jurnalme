@@ -16,7 +16,7 @@
   </h2>
   <span class="pull-right">
     &nbsp;&nbsp;&nbsp;
-    <b><i class="fa fa-clock-o"></i> <?php echo $notes->notes_date;?></b> &middot; <i class="fa fa-book"></i> <b><?php echo $notes->notes_notebooks_id;?></b>
+    <b><i class="fa fa-clock-o"></i> <?php echo $notes->notes_date;?></b>
   </span>
 <hr>
 <div id="pin-outer col-lg-12">
